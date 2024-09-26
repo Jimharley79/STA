@@ -1,45 +1,36 @@
 <h1>
 I miei siti preferiti
 </h1>
+<ul>
 
-<a href="https://www.palermofc.com/it/"> PalermoFC </a>
-<br>
+<li><a href="https://www.palermofc.com/it/"> PalermoFC </a></li>
 </p>
 <p>
-<a href="https://www.youtube.com/"> Youtube </a>
-<br>
+<li><a href="https://www.youtube.com/"> Youtube </a></li>
 </p>
 <p>
-<a href="https://www.netflix.com/"> Netflix </a>
-<br>
+<li><a href="https://www.netflix.com/"> Netflix </a></li>
 </p>
 <p>
-<a href="https://www.animesaturn.cx/"> Anime saturn </a>
-<br>
+<li><a href="https://www.animesaturn.cx/"> Anime saturn </a></li>
 </p>
 <p>
-<a href="https://wowroms.com/en/"> Wow roms </a>
-<br>
+<li><a href="https://wowroms.com/en/"> Wow roms </a></li>
 </p>
 <p>
-<a href="https://www.panini.it/shp_ita_it/"> Panini </a>
-<br>
+<li><a href="https://www.panini.it/shp_ita_it/"> Panini </a></li>
 </p>
 <p>
-<a href="https://gamejolt.com/"> GameJolt </a>
-<br>
+<li><a href="https://gamejolt.com/"> GameJolt </a></li>
 </p>
 <p>
-<a href="https://itch.io/"> itch.io </a>
-<br>
+<li><a href="https://itch.io/"> itch.io </a></li>
 </p>
 <p>
-<a href="https://www.nerdsparadiseshop.com/?v=cd32106bcb6d"> Nerds paradise shop </a>
-<br>
+<li><a href="https://www.nerdsparadiseshop.com/?v=cd32106bcb6d"> Nerds paradise shop </a></li>
 </p>
 <p>
-<a href="https://it.wikipedia.org/wiki/Pagina_principale"> Wikipedia </a>
-<br>
+<li><a href="https://it.wikipedia.org/wiki/Pagina_principale"> Wikipedia </a></li>
 
 
 </p>
