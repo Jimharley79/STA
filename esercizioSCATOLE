@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+       #miascatola1{
+           background-color:darksalmon;
+           width: 100px;
+           height: 100px;
+       }
+       #miascatola2{
+           background-color:navy;
+           width: 100px;
+           height: 100px;
+       }
+       #miascatola3{
+         background-color:tomato;
+         width: 100px;
+         height: 100px;
+       }
+       #miascatola4{
+           background-color:fuchsia;
+           width: 100px;
+           height: 100px;
+       }
+       #miascatola5{
+           background-color:yellow;
+           width: 100px;
+           height: 100px;
+       }
+
+
+   </style>
+
+</head>
 <body>
-    <div id="miascatola1">
-
+    <div id="miascatola1">  
     </div>
-    <div id="miascatola2">
-
+    <div id="miascatola2">  
     </div>
     <div id="miascatola3">
-
     </div>
     <div id="miascatola4">
-
     </div>
     <div id="miascatola5">
-
     </div>
- 
 
-<style>
-#miascatola1{
-background-color:darksalmon;
-width: 100px;
-height: 100px; 
-}
-#miascatola2{
-background-color:navy;
+
+
+</body>
+</html>
 width:100px;
 height:100px;
 }
