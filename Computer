@@ -1,0 +1,86 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Computer</title>
+        <style>
+            #Computerone{
+                background-color: gray;
+                width: 1000px;
+                height: 1000px;
+            }
+            #miascatola1{
+                background-color: darkgray;
+                width: 300px;
+                height: 300px;
+                margin: 50px;
+                padding: 50px;
+            }
+            #miascatola2{
+                background-color: darkgray;
+                width: 300px;
+                height: 300px;
+                margin: 50px;
+                padding: 50px;
+            }
+            #miascatola3{
+              background-color: darkgray;
+              width: 300px;
+              height: 300px;
+              margin: 50px;
+              padding: 50px;
+            }
+            #miascatola4{
+                background-color: darkgray;
+                width: 300px;
+                height: 300px;
+                margin: 50px;
+                padding: 50px;
+            }
+            #scatoladentromiascatola1{
+                background-color: lightgray;
+                width: 300px;
+                height: 100px;
+            }
+            #scatoladentromiascatola2{
+                background-color: lightgray;
+                width: 300px;
+                height: 100px;
+            }
+            #scatoladentromiascatola3{
+                background-color: lightgray;
+                width: 300px;
+                height: 100px;
+            }
+            #scatoladentromiascatola4{
+                background-color: lightgray;
+                width: 300px;
+                height: 100px
+            }
+        
+            </style>
+            <div id="Computerone">
+            </div>
+            <div id="miascatola1">
+            <div id="scatoladentromiascatola1">
+            </div>    
+            </div>
+            <div id="miascatola2">
+            <div id="scatoladentromiascatola2">    
+            </div>
+            </div>
+            <div id="miascatola3">
+            <div id="scatoladentromiascatola3">    
+            </div>
+            </div>
+            <div id="miascatola4">
+            <div id="scatoladentromiascatola4">    
+            </div>
+            </div>
+    </head>
+    <body>
+        
+    </body>
+    </html>
