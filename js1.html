@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prima lezione Javascript</title>
+
+<style>
+  #miobottone1{
+  background-color:turquoise;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#miobottone2{
+  background-color:darkblue;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#miobottone3{
+  background-color:mistyrose;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<p>
+La mia prima pagina html con Javascript
+evidenzia il funzionamento degli eventi associati 
+al premere di un bottone. 
+Il comando "button" è un tag "html"
+Stilizzo il bottone come piace a me
+</p>
+
+<button id="miobottone1" onclick="eseguifinestra1()">clicca per vedere che musica ascolto</button>
+<button id="miobottone2" onclick="eseguifinestra2()"> clicca per vedere che squadra tifo</button>
+<button id="miobottone3" onclick="eseguifinestra3()">clicca per vedere che lavoro voglio fare da grande</button>
+
+<script>
+function eseguifinestra1()
+{alert("Principalmente ascolto musica Metal, Rock, Punk, Jazz, Soft rock ecc.")}
+
+function eseguifinestra2()
+{alert("Tifo il Palermo")}
+
+function eseguifinestra3()
+{alert("Vorrei fare il gestore di un'azienda robotica")}
+</script>
+</body>
+</html>
