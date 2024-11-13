@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aforismi</title>
+  <style>
+    .aforisma {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: brown;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: maroon;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aforismi di Scienziati</h1>
+
+  <div class="aforisma">
+    <p id="aforisma1">“Non ho mai incontrato un uomo così ignorante dal quale non abbia potuto imparare qualcosa.”
+
+      -Galileo Galilei</p>
+    <button onclick="nascondiTesto('aforisma1')">Nascondi Aforisma</button>
+  </div>
+
+  <div class="aforisma">
+    <p id="aforisma2">“Se ho fatto una qualche scoperta di valore, è dovuta più alla paziente attenzione che ad ogni altro talento.”
+
+      -Isaac Newton</p>
+    <button onclick="nascondiTesto('aforisma2')">Nascondi Aforisma</button>
+  </div>
+
+  <div class="aforisma">
+    <p id="aforisma3">"Per lo zoologo la parola "creazione" ha il significato di un "processo di cui ignora le modalità"
+        -Charles Robert Darwin
+        
+        </p>
+    <button onclick="nascondiTesto('aforisma3')">Nascondi Aforisma</button>
+  </div>
+
+  <div class="aforisma">
+    <p id="aforisma4">"Non possiamo risolvere i nostri problemi con lo stesso pensiero che usavamo quando li abbiamo creati." - Albert Einstein</p>
+    <button onclick="nascondiTesto('aforisma4')">Nascondi Aforisma</button>
+  </div>
+
+  <div class="aforisma">
+    <p id="aforisma5">"La scienza è l'arte di comprendere ciò che ci circonda." - Carl Sagan</p>
+    <button onclick="nascondiTesto('aforisma5')">Nascondi Aforisma</button>
+  </div>
+
+  <script>
+    function nascondiTesto(id) {
+      const testo = document.getElementById(id);
+      testo.style.display = "none"; 
+    }
+  </script>
+</body>
+</html>
