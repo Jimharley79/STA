@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prima lezione javascript</title>
+
+    <style>
+#miobottone1 {
+  border: grey;
+  background-color: aquamarine;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ 
+
+</style>
+</head>
+<body>
+          <p>La mia prima pagina html con javascript
+             evidenzia il funzionamento degli eventi associati
+             al premere di un bottone.
+            Il comando "button" è un tag html "html"
+            Stilizzo il bottone come piace a me!
+          </p>
+          <input id="mioinput" type="text">
+          <button id="miobottone1" onclick="eseguiFinestra1()"> cliccami per vedere che musica ascolto</button>
+          
+<script>
+    function eseguiFinestra1()
+    {
+        let str=document.getElementById("mioinput").value;
+        alert("Ascolto principalmente metal, rock, punk, ma anche jazz."+ str);
+    }
+
+</script>
+</body>
+</html>
