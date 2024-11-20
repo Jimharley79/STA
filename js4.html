@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +10,18 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
         }
-      
+        #container1 {
+            padding: 20px;
+            border: 1px solid black;
+            background-image: url('Montagna.jpeg');
+            background-size: cover;
+            color: white;
+            margin: 50px auto;
+            height: 600px; 
+            text-align: center;
+            border-radius: 10px;
+           
+        }
         input {
          
             padding: 10px;
@@ -40,7 +52,9 @@
             margin-top: 20px;
             
         }
-        <body>
+    </style>
+</head>
+<body>
     <div id="container1">
         <h2>Calcola il dislivello</h2>
         <p>Inserisci i dati nella tabella e premi il tasto "Calcola dislivello"</p>
@@ -53,10 +67,7 @@
         <p></p>
         <button onclick="calcola()">Calcola dislivello</button>
         <p id="out1"></p>
-      
-       
     </div>
-        { document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";}
 
     <script>
         function calcola() {
@@ -64,14 +75,8 @@
             let i2 = parseInt(document.getElementById("pausa").value);
             let i3 = parseInt(document.getElementById("arrivo").value);
             let risultato = i3 - i1;
-           
+            document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
         }
     </script>
-
-         
-        
-        
-    </style>
-</head>
-
+</body>
 </html>
