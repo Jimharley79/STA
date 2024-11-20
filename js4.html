@@ -41,12 +41,6 @@
             
         }
         <body>
-           {background-image: https://upload.wikimedia.org/wikipedia/commons/0/00/IMG_2124_Everest.jpg("Montagna.jpeg");}
-        </body>
-        
-    </style>
-</head>
-<body>
     <div id="container1">
         <h2>Calcola il dislivello</h2>
         <p>Inserisci i dati nella tabella e premi il tasto "Calcola dislivello"</p>
@@ -62,6 +56,7 @@
       
        
     </div>
+        { document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";}
 
     <script>
         function calcola() {
@@ -69,8 +64,14 @@
             let i2 = parseInt(document.getElementById("pausa").value);
             let i3 = parseInt(document.getElementById("arrivo").value);
             let risultato = i3 - i1;
-            document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
+           
         }
     </script>
-</body>
+
+         
+        
+        
+    </style>
+</head>
+
 </html>
