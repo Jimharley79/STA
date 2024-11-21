@@ -14,6 +14,7 @@
             height: 500px;
             width: 500px;
         }
+        #container2{ background-image: url("Montagna2.jpeg"); height: 500px; width: 500px;}
        
            
     
@@ -47,6 +48,7 @@
             margin-top: 20px;
             
         }
+        #out1 {margin-top: 20px;}
     </style>
 </head>
 <body>
@@ -61,7 +63,22 @@
         <input id="arrivo" type="number">
         <p></p>
         <button onclick="calcola()">Calcola dislivello</button>
+        
         <p id="out1"></p>
+    </div>
+    <div id="container2">
+        <h2>Calcola il tempo</h2>
+        <p>Inserisci i dati nella tabella e premi il tasto "Calcola tempo"</p>
+        <p><label for="partenza">Partenza </label></p>
+        <input id="partenza" type="number">
+        <p><label for="pausa">Pausa trekking </label></p>
+        <input id="pausa" type="number">
+        <p><label for="arrivo">Arrivo </label></p>
+        <input id="arrivo" type="number">
+        <p></p>
+        <button onclick="calcola()">Calcola tempo</button>
+        
+        <p id="out2"></p>
     </div>
 
     <script>
@@ -72,6 +89,9 @@
             let risultato = i3 - i1;
             document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
         }
+        function calcolaTempo() {}
+
     </script>
+    
 </body>
 </html>
