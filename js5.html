@@ -69,12 +69,11 @@
     <div id="container2">
         <h2>Calcola il tempo</h2>
         <p>Inserisci i dati nella tabella e premi il tasto "Calcola tempo"</p>
-        <p><label for="partenza">Partenza </label></p>
-        <input id="partenza" type="number">
-        <p><label for="pausa">Pausa trekking </label></p>
-        <input id="pausa" type="number">
-        <p><label for="arrivo">Arrivo </label></p>
-        <input id="arrivo" type="number">
+        <p><label for="Ore"> Ore</label></p>
+        <input id="Ore" type="number">
+        <p><label for="Minuti"> Minuti
+        </label></p>
+        <input id="Minuti" type="number">
         <p></p>
         <button onclick="calcola()">Calcola tempo</button>
         
@@ -89,7 +88,9 @@
             let risultato = i3 - i1;
             document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
         }
-        function calcolaTempo() {}
+        function calcolaTempo() {
+            
+        }
 
     </script>
     
