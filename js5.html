@@ -45,6 +45,7 @@
            
         }
         #out1 {
+
             margin-top: 20px;
             
         }
@@ -70,10 +71,10 @@
         <h2>Calcola il tempo</h2>
         <p>Inserisci i dati nella tabella e premi il tasto "Calcola tempo"</p>
         <p><label for="Ore"> Ore</label></p>
-        <input id="Ore" type="number">
+        <input id="ora1" type="number"><input id="min1" type="number">
         <p><label for="Minuti"> Minuti
         </label></p>
-        <input id="Minuti" type="number">
+        <input id="ora2" type="number"><input id="min2" type="number">
         <p></p>
         <button onclick="calcola()">Calcola tempo</button>
         
@@ -89,23 +90,34 @@
             document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
         }
         function calcolaTempo() {
-            let partenza = document.getElementById("orarioPartenza").value.split(":");
-            let arrivo = document.getElementById("orarioArrivo").value.split(":");
+        let ora1;
+        let min1;
+        let ora2;
+        let min2;
 
-            let orePartenza = parseInt(partenza[0]);
-            let minutiPartenza = parseInt(partenza[1]);
 
-            let oreArrivo = parseInt(arrivo[0]);
-            let minutiArrivo = parseInt(arrivo[1]);
+        // Ottieni i valori delle altezze inserite
+        ora1 = parseInt(document.getElementById("ora1").value);
+        min1 = parseInt(document.getElementById("min1").value);
+        ora2= parseInt(document.getElementById("ora2").value);
+        min2 = parseInt(document.getElementById("min2").value);
+        // Calcola il dislivello totale
+        let risultato= calcolaDifferenza(ora1,min1,ora2,min2)
+        // Mostra il risultato
+        document.getElementById("out2").innerHTML =risultato;
+    }
 
-            let minutiTotaliPartenza = orePartenza * 60 + minutiPartenza;
-            let minutiTotaliArrivo = oreArrivo * 60 + minutiArrivo;
 
-            let differenzaMinuti = minutiTotaliArrivo - minutiTotaliPartenza;
-            let ore = Math.floor(differenzaMinuti / 60);
-            let minuti = differenzaMinuti % 60;
+    // Funzione per calcolare la differenza in minuti
+function calcolaDifferenza(ora1, minuto1, ora2, minuto2) {
+    // Converti entrambe le ore e i minuti in minuti totali
+    const minutiTotali1 = (ora1 * 60) + minuto1;
+    const minutiTotali2 = (ora2 * 60) + minuto2;
 
-            document.getElementById("out2").innerText = "Tempo di percorrenza: " + ore + " ore e " + minuti + " minuti.";
+    // Calcola la differenza in valore assoluto
+    const differenza = Math.abs(minutiTotali1 - minutiTotali2);
+
+    return differenza;
         }
 
             
@@ -115,4 +127,3 @@
     
 </body>
 </html>
-
