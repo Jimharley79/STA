@@ -48,7 +48,7 @@
             margin-top: 20px;
             
         }
-        #out1 {margin-top: 20px;}
+        #out2 {margin-top: 20px;}
     </style>
 </head>
 <body>
@@ -89,10 +89,30 @@
             document.getElementById("out1").innerHTML = "Il dislivello totale è: " + risultato + " metri.";
         }
         function calcolaTempo() {
-            
+            let partenza = document.getElementById("orarioPartenza").value.split(":");
+            let arrivo = document.getElementById("orarioArrivo").value.split(":");
+
+            let orePartenza = parseInt(partenza[0]);
+            let minutiPartenza = parseInt(partenza[1]);
+
+            let oreArrivo = parseInt(arrivo[0]);
+            let minutiArrivo = parseInt(arrivo[1]);
+
+            let minutiTotaliPartenza = orePartenza * 60 + minutiPartenza;
+            let minutiTotaliArrivo = oreArrivo * 60 + minutiArrivo;
+
+            let differenzaMinuti = minutiTotaliArrivo - minutiTotaliPartenza;
+            let ore = Math.floor(differenzaMinuti / 60);
+            let minuti = differenzaMinuti % 60;
+
+            document.getElementById("out2").innerText = "Tempo di percorrenza: " + ore + " ore e " + minuti + " minuti.";
         }
+
+            
+    
 
     </script>
     
 </body>
 </html>
+
