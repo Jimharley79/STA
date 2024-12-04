@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selezione</title>
+<style>
+.button1 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: brown;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px purple;
+}
+
+</style>
+</head>
+<h1>Inserire la propria età nella casella quà sotto</h1>
+<button class="button1" onclick="inputNumero()">Inserisci la tua età</button>
+
+<script>
+
+  function inputNumero(){
+       let numero = prompt("Inserisci la tua età");
+       numero=Number(numero);
+
+        if (numero>=18)
+        {
+            alert("Benvenuto")
+
+        }
+        else
+        {
+            alert("Devi essere almeno diciottènne.")
+
+        }
+    }
+</script>
+
+</body>
+</html>
