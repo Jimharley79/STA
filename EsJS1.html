@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsJS1</title>
+    <style>
+        .button {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: navy;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          padding: 20px;
+          width: 200px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+        
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        
+        .button:hover span {
+          padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+        </style>
+</head>
+<body>
+    <h2>Dopo aver inserito la tua età, clicca questo bottone</h2>
+
+<button class="button" style="vertical-align:middle"><span> Clicca m'bare </span></button>
+<p>
+Inserisci la tua età quì:
+</p>
+
+<script>
+
+    function inputNumero(){
+       let numero = prompt("Inserisci il numero");
+       numero = Number(numero);
+
+        if (numero === 18) {
+            alert("Accedi al sistema");
+        } else if (numero === 17) {
+            alert("Puoi accedere al sistema tra");
+        } else if (numero === 3) {
+            alert("Mercoledì");
+        } else if (numero === 4) {
+            alert("Giovedì");
+        } else if (numero === 5) {
+            alert("Venerdì");
+        } else if (numero === 6) {
+            alert("Sabato");
+        } else if (numero === 7) {
+            alert("Domenica");
+        } else {
+            alert("Numero invalido. Inserisci un numero da 1 a 7.");
+        }
+    }
+
+</script>
+</body>
+</html>
