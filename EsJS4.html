@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsJS4</title>
+    <style>
+    .button {
+  background-color: fuchsia;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+.button:hover {opacity: 1}
+    </style>
+</head>
+<body>
+    <h1>Inserisci il mese di nascita e l'anno</h1>
+    <input type="text" id="Mese" placeholder="Mese (Gennaio a Dicembre)"><br>
+    <input type="text" id="Anno" placeholder="Anno"><br>
+    <p><button class="button" id="button" onclick="Messagge()">Clicca per sapere</button></p>
+    <p id="output"></p>
+
+    <script>
+        function Messagge() {
+            let Mese = document.getElementById("Mese").value.toLowerCase();
+            let Anno = document.getElementById("Anno").value;
+            let DataCorrente = new Date();
+            let AnnoCorrente = DataCorrente.getFullYear();
+            let Età = AnnoCorrente - Anno;
+
+            let Mesi = {
+                gennaio: 1,
+                febbraio: 2,
+                marzo: 3,
+                aprile: 4,
+                maggio: 5,
+                giugno: 6,
+                luglio: 7,
+                agosto: 8,
+                settembre: 9,
+                ottobre: 10,
+                novembre: 11,
+                dicembre: 12
+            };
+
+            if (Mesi[Mese] !== undefined) {
+                document.getElementById("output").innerText = "Il numero del mese di nascita è il " + Mesi[Mese] + " e hai " + Età + " anni.";
+            } else {
+                alert("Mese non valido. Inserisci un mese da Gennaio a Dicembre.");
+            }
+        }
+    </script>
+</body>
+</html>
