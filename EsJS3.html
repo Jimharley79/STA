@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aspettativa di vita</title>
+    <style>
+.button {
+  background-color: goldenrod;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+    </style>
+</head>
+<body>
+    <h2>Inserisci il tuo nome e il tuo sesso.</h2>
+    <input type="text" id="Nome" placeholder="Nome"><br>
+    <input type="text" id="Sesso" placeholder="Sesso (M o F)"><br>
+    <p><button class= "button" id="button" onclick="Messaggio()">Clicca quà per sapere la tua aspettativa di vita</button></p>
+    <p id="output"></p>
+
+    <script>
+        function Messaggio() {
+            let Nome = document.getElementById("Nome").value;
+            let Sesso = document.getElementById("Sesso").value;
+            
+            if (Sesso === "M") {
+                document.getElementById("output").innerHTML = "Ciao," + Nome + "! la tua aspettativa di vita è 84,01 anni ";
+            } else if (Sesso === "F") {
+                document.getElementById("output").innerHTML = "Ciao," + Nome + "! la tua aspettativa di vita è 85,97 anni ";
+            } else {
+                document.getElementById("output").innerHTML = "Il sesso inserito è invalido. Inserisci M o F.";
+            }
+        }
+    </script>
+</body>
+</html>
