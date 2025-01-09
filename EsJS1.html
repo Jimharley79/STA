@@ -47,12 +47,10 @@
         </style>
 </head>
 <body>
-    <h2>Dopo aver inserito la tua età, clicca questo bottone</h2>
+    <h2>Premi il bottonequà sotto per inserire la tua età</h2>
 
-<button class="button" style="vertical-align:middle"><span> Clicca m'bare </span></button>
-<p>
-Inserisci la tua età quì:
-</p>
+<button class="button" style="vertical-align:middle " onclick="inputNumero()"><span> Clicca m'bare </span></button>
+
 
 <script>
 
@@ -60,24 +58,16 @@ Inserisci la tua età quì:
        let numero = prompt("Inserisci il numero");
        numero = Number(numero);
 
-        if (numero === 18) {
-            alert("Accedi al sistema");
-        } else if (numero === 17) {
-            alert("Puoi accedere al sistema tra");
-        } else if (numero === 3) {
-            alert("Mercoledì");
-        } else if (numero === 4) {
-            alert("Giovedì");
-        } else if (numero === 5) {
-            alert("Venerdì");
-        } else if (numero === 6) {
-            alert("Sabato");
-        } else if (numero === 7) {
-            alert("Domenica");
+       if (numero >= 18) {
+            alert("Puoi accedere al sistema. Benvenuto.");
+        } else if (numero < 18) {
+            let anniMiss= 18 - numero;
+            alert("Puoi accedere tra" + anniMiss + "anni");
         } else {
-            alert("Numero invalido. Inserisci un numero da 1 a 7.");
+            alert("Età non valida.");
         }
     }
+    
 
 </script>
 </body>
