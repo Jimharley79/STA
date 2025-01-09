@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsJS1</title>
+    <style>
+        .button {
+  position: relative;
+  background-color: palevioletred;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+        </style>
+</head>
+<body>
+    <h2>Premi il bottone quà sotto per inserire la città dove abiti e ti dirò la sua popolazione</h2>
+
+<button class="button" style="vertical-align:middle " onclick="inputNumero()"><span> Clicca cumpà</span></button>
+
+<script>
+
+    function inputNumero(){
+       let numero = prompt("Inserisci il nome della città");
+       città= Number(numero);
+
+       if (città >= 18) {
+            alert("Puoi accedere al sistema. Benvenuto.");
+        } else if (numero < 18) {
+            let anniMiss= 18 - numero;
+            alert("Puoi accedere tra" + anniMiss + "anni");
+        } else {
+            alert("Età non valida.");
+        }
+    }
+    
+
+</script>
 
