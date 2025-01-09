@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EsJS1</title>
+    <title>EsJS2</title>
     <style>
-        .button {
+    .button {
   position: relative;
   background-color: palevioletred;
   border: none;
@@ -44,24 +44,38 @@
 <body>
     <h2>Premi il bottone quà sotto per inserire la città dove abiti e ti dirò la sua popolazione</h2>
 
-<button class="button" style="vertical-align:middle " onclick="inputNumero()"><span> Clicca cumpà</span></button>
+    <input type="text" id="città" placeholder="Inserisci la città"><br>
+    <p><button class="button" id="button" onclick="mostraAbitanti()">Clicca m'bare</button></p>
+    <p id="output"></p>
+
 
 <script>
 
-    function inputNumero(){
-       let numero = prompt("Inserisci il nome della città");
-       città= Number(numero);
+    function mostraAbitanti() {
+       let città = document.getElementById("città").value.toLowerCase();
+       let abitanti;
 
-       if (città >= 18) {
-            alert("Puoi accedere al sistema. Benvenuto.");
-        } else if (numero < 18) {
-            let anniMiss= 18 - numero;
-            alert("Puoi accedere tra" + anniMiss + "anni");
-        } else {
-            alert("Età non valida.");
-        }
-    }
-    
-
+       if (città === "Torino") {
+            abitanti= "Torino ha 852.877 abitanti. (31-10-2024)";
+        } else if (città === "Nichelino") {
+            abitanti= "Nichelino ha 46.000 abitanti. (2023)";
+        } else if (città === "Moncalieri") {
+            abitanti= "Moncalieri ha 55.984 abitanti. (2023)";
+        } else if (città === "Vinovo") {
+            abitanti= "Vinovo ha 15.348 abitanti. (al 31/12/2023)";
+        } else if (città === "Rivoli") {
+            abitanti= "Rivoli ha 46.610 abitanti. (2023)";
+        } else if (città === "Collegno") {
+            abitanti= "Collegno ha 48 137 abitanti. (2023)";
+        } else if (città === "Settimo") {
+            abitanti= "Settimo ha 45.853 abitanti. (30-4-2024)";
+        } else if (città === "Chieri") {
+            abitanti= "Chieri ha 13.694 abitanti. (2023)";
+        } else { 
+            abitanti= "Città non valida. Inserisci una città della cintura di Torino.";
+        }    
+document.getElementById("output").innerText = abitanti;
+}
 </script>
-
+</body>
+</html>
