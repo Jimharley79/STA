@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsJS6</title>
+    <style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: blueviolet;}
+
+.button:active {
+  background-color: blueviolet;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
+</head>
+<body>
+    <h1>Stima del valore immobiliare di una casa</h1>
+    <p>Inserire quì sotto la distanza dal mare</p>
+    <input type="number" id="Distanza" placeholder="Distanza dal mare (in metri)"><br>
+    <p><button class="button" id="button" onclick="Valore()">Calcolazionamento</button></p>
+    <p id="output"></p>
+
+    <script>
+        function Valore() {
+            let Distanza = document.getElementById("Distanza").value;
+            let CostoAlMetroQuadro;
+
+            if (Distanza < 100) {
+                CostoAlMetroQuadro = 10000;
+            } else {
+                CostoAlMetroQuadro = 7000;
+            }
+
+            document.getElementById("output").innerText = "Il costo al metro quadro è " + CostoAlMetroQuadro + " euro.";
+        }
+    </script>
+</body>
+</html>
