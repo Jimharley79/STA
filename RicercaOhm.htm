@@ -82,9 +82,9 @@
 
 <script>
     function Calcola() {
-        let formula = document.getElementById("formula").value;
-        let valore1 = document.getElementById("valore1").value;
-        let valore2 = document.getElementById("valore2").value;
+        let formula = parseFloat(document.getElementById("formula").value);
+        let valore1 = parseFloat(document.getElementById("valore1").value);
+        let valore2 = parseFloat(document.getElementById("valore2").value);
         let risultato;
         if (formula === 1) {
             risultato=valore1*valore2;
