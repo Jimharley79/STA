@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RicercaOhm.htm</title>
 
+    <style>
+        .button{
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: forestgreen;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+          }
+          
+          .button:hover {background-color: slategray;}
+          
+          .button:active {
+            background-color: aquamarine;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+          }
+        
+         
+          input[type=number]::-webkit-outer-spin-button,
+          input[type=number]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+          }
+        
+          input[type=number] {
+              appearance: textfield;
+              -moz-appearance: textfield;
+          }
+        </style>
+</head>
+<body>
+    <img src="Ohm" width="300" length="300">
+    <h1>Scegli quale formula utilizzare (1: V=I⋅R; 2: I= V/R; o 3: R=V/I.)</h1>    
+<input type="text" id="Numero formula" placeholder="Numero formula (1, 2, o 3)">
+
+<input type="text" id="1" placeholder="V; I; o R">
+<input type="text" id="2" placeholder="V; I; o R">
+
+
+
+<p><button class="button" id="button" onclick="Calcola()">Calcola</button></p>
+<p id="output"></p>
+
+<script>
+    function Calcola() {
+        let formula = document.getElementById("formula").value;
+        let valore1 = document.getElementById("valore1").value;
+        let valore2 = document.getElementById("valore2").value;
+        let risultato;
+        if (formula === 1) {
+            risultato=valore1*valore2;
+            document.getElementById("output").innerText = "V è" + risultato + "Volt";
+        } else if (formula === 2) {
+            risultato=valore1/valore2;
+            document.getElementById("output").innerText = "I è" + risultato + "di Intensità";
+        } else if (formula === 3) {
+            risultato=valore1/valore2;
+            document.getElementById("output").innerText = "R è" + risultato + "di Resistenza";
+        } else {
+            document.getElementById("output").innerText = "Formula invalida. Inserire 1, 2, o 3.";
+            
+        }
+    
+    
+    
+    }
+    </script>
+</body>
+</html>
