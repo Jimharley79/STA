@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Dazi di Esportazione</title>
+    <style>
+        /* Stile di base per la pagina */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calcolatore Dazi di Esportazione</h1>
+        
+        <!-- Spiegazione del dazio -->
+        <p>Un dazio è una tassa imposta su un bene importato o esportato. Viene calcolato come una percentuale del valore della merce, e varia a seconda del paese di destinazione e del tipo di merce.</p>
+
+        <!-- Tabella con i dazi per esempio -->
+        <h3>Tabella dei Dazi di Esportazione (Esempio)</h3>
+        <table>
+            <tr>
+                <th>Paese</th>
+                <th>Dazio (%)</th>
+            </tr>
+            <tr>
+                <td>USA</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Cina</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Giappone</td>
+                <td>3%</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>7%</td>
+            </tr>
+        </table>
+
+        <!-- Form per il calcolatore -->
+        <div>
+            <h3>Calcola il valore dell'esportazione</h3>
+            
+            <!-- Input per costo e ricarico -->
+            <input type="number" id="costo" placeholder="Inserisci il costo (in Euro)">
+            <input type="number" id="ricarico" placeholder="Inserisci il ricarico (in Euro)">
+            
+            <!-- Bottone per calcolare la somma -->
+            <button onclick="calcolaSomma()">Calcola valore esportazione</button>
+            
+            <br>
+            
+            <!-- Input per la percentuale -->
+            <input type="number" id="percentuale" placeholder="Inserisci la percentuale (0-100)" value="20">
+            
+            <!-- Bottone per calcolare la percentuale -->
+            <button onclick="calcolaPercentuale()">Calcola percentuale</button>
+            
+            <br>
+            
+            <!-- Campo per il valore della percentuale ottenuta -->
+            <input type="number" id="valorePercentuale" placeholder="Valore della percentuale" disabled>
+            
+            <div class="result">
+                <!-- Risultati finali -->
+                <p id="dazioResult"></p>
+                <p id="conversioneResult"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funzione per calcolare la somma tra costo e ricarico
+        function calcolaSomma() {
+            // Ottieni i valori dal form
+            var costo = parseFloat(document.getElementById('costo').value);
+            var ricarico = parseFloat(document.getElementById('ricarico').value);
+            
+            // Controllo se i valori sono numerici
+            if (isNaN(costo) || isNaN(ricarico)) {
+                alert("Inserisci valori numerici validi.");
+                return;
+            }
+
+            // Calcola la somma
+            var somma = costo + ricarico;
+            alert("Valore esportazione (costo + ricarico): " + somma + " Euro");
+        }
+
+        // Funzione per calcolare la percentuale
+        function calcolaPercentuale() {
+            var costo = parseFloat(document.getElementById('costo').value);
+            var ricarico = parseFloat(document.getElementById('ricarico').value);
+            var percentuale = parseFloat(document.getElementById('percentuale').value);
+
+            // Verifica se i dati inseriti sono validi
+            if (isNaN(costo) || isNaN(ricarico) || isNaN(percentuale)) {
+                alert("Inserisci valori numerici validi.");
+                return;
+            }
+
+            // Calcola la somma
+            var somma = costo + ricarico;
+
+            // Calcola la percentuale della somma
+            var percentualeCalcolata = (somma * percentuale) / 100;
+            document.getElementById('valorePercentuale').value = percentualeCalcolata.toFixed(2);
+
+            // Calcola il dazio e la conversione in $ (usando il tasso di cambio di 1.1)
+            var dazio = percentualeCalcolata * 0.05; // Dazio esempio al 5%
+            var conversione = percentualeCalcolata * 1.1; // Conversione in $ (1 Euro = 1.1 USD)
+
+            // Mostra i risultati
+            document.getElementById('dazioResult').innerText = "Dazio (5%): " + dazio.toFixed(2) + " Euro";
+            document.getElementById('conversioneResult').innerText = "Valore in Dollari (USD): " + conversione.toFixed(2) + " USD";
+        }
+    </script>
+
+</body>
+</html>
